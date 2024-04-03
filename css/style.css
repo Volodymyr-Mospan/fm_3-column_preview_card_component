@@ -1,0 +1,133 @@
+:root {
+  --first-family: "Lexend Deca", sans-serif;
+  --second-family: "Big Shoulders Display", sans-serif;
+
+  --main-color: rgba(255, 255, 255, 0.75);
+  --second-color: #f2f2f2;
+
+  --main-bg-color: #e28625;
+  --second-bg-color: #006971;
+  --thirth-bg-color: #004140;
+}
+
+body {
+  font-family: var(--first-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.67;
+  color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.positioning {
+  display: flex;
+  width: 100svw;
+  height: 100svh;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-wrapper {
+  display: flex;
+  width: max-content;
+
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--main-bg-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 307px;
+  min-height: 500px;
+
+  padding: 48px;
+
+  &.second-bg-color {
+    background-color: var(--second-bg-color);
+  }
+
+  &.thirth-bg-color {
+    background-color: var(--thirth-bg-color);
+  }
+}
+
+.circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 35px;
+
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 44px;
+  height: 40px;
+}
+
+.class-name {
+  margin-bottom: 25px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--second-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid var(--second-color);
+  border-radius: 25px;
+  background-color: var(--second-color);
+
+  text-decoration: none;
+  color: var(--main-bg-color);
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+
+.second-bg-color .button {
+  color: var(--second-bg-color);
+}
+
+.thirth-bg-color .button {
+  color: var(--thirth-bg-color);
+}
+
+.button:hover,
+.button:focus {
+  background-color: inherit;
+  color: var(--second-color);
+}
